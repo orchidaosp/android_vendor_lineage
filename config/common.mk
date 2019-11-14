@@ -122,6 +122,11 @@ PRODUCT_PACKAGES += \
     LockClock \
     Profiles \
     WeatherProvider
+# Sauces packages
+PRODUCT_PACKAGES += \
+    LatinIMEGooglePrebuilt \
+    SoundPickerPrebuilt
+
 
 # Accents
 PRODUCT_PACKAGES += \
