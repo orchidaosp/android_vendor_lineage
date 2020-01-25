@@ -112,15 +112,31 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bootanimation.zip
 
-# AOSP packages
-PRODUCT_PACKAGES += \
-    Terminal
+#PRODUCT_PACKAGES += \
 
 # Lineage packages
 PRODUCT_PACKAGES += \
+    Backgrounds \
     LineageParts \
     LineageSettingsProvider \
-    Updater
+    LockClock \
+    Profiles \
+    WeatherProvider
+
+# Accents
+PRODUCT_PACKAGES += \
+    LineageBlackTheme \
+    LineageDarkTheme \
+    LineageBlackAccent \
+    LineageBlueAccent \
+    LineageBrownAccent \
+    LineageCyanAccent \
+    LineageGreenAccent \
+    LineageOrangeAccent \
+    LineagePinkAccent \
+    LineagePurpleAccent \
+    LineageRedAccent \
+    LineageYellowAccent
 
 # Themes
 PRODUCT_PACKAGES += \
