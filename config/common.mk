@@ -128,6 +128,10 @@ PRODUCT_PACKAGES += \
     SoundPickerPrebuilt
 
 
+# MarkupGoogle
+PRODUCT_PACKAGES += \
+    MarkupGoogle 
+
 # Accents
 PRODUCT_PACKAGES += \
     LineageBlackTheme \
@@ -257,7 +261,14 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lineage/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/common
 
-PRODUCT_VERSION_MAJOR = 1
+
+# Markup Google
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
+    vendor/lineage/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
+
+# Product version should match Android version
+PRODUCT_VERSION_MAJOR = 10
 PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE := 0
 
@@ -386,3 +397,13 @@ endif
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk
 -include vendor/aeonax/anxcamera/anx-vendor.mk
+
+# Fonts
+PRODUCT_COPY_FILES += \
+    vendor/lineage/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
+    vendor/lineage/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
+    vendor/lineage/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
+    vendor/lineage/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
+    vendor/lineage/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
+    vendor/lineage/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
+

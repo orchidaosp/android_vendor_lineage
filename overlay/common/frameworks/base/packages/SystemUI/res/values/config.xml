@@ -39,19 +39,10 @@
          does not work well, particularly with noisy touchscreens. Note that disabling it may
          increase the rate of unintentional unlocks. -->
     <bool name="config_lockscreenAntiFalsingClassifierEnabled">false</bool>
-    <!-- Whether or not we show the number in the bar. -->
-    <bool name="config_statusBarShowNumber">true</bool>
 
-    <!-- The number of columns in the QuickSettings -->
-    <integer name="quick_settings_num_columns">4</integer>
+    <!-- Screenshot editing default activity.  Must handle ACTION_EDIT image/png intents.
+         Blank sends the user to the Chooser first.
+         This name is in the ComponentName flattened format (package/class)  -->
+    <string name="config_screenshotEditor" translatable="false">com.google.android.markup/com.google.android.markup.AnnotateActivity</string>
 
-    <!-- The number of rows in the QuickSettings -->
-    <integer name="quick_settings_num_rows">1</integer>
-
-    <!-- The number of columns that the top level tiles span in the QuickSettings -->
-    <integer name="quick_settings_user_time_settings_tile_span">1</integer>
-
-    <bool name="enable_volume_ui">true</bool>
-
-    <bool name="config_showTaskManagerSwitcher">true</bool>
 </resources>
