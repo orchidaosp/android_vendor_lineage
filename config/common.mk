@@ -1,8 +1,4 @@
 # Allow vendor/extra to override any property by setting it first
-$(call inherit-product-if-exists, vendor/extra/product.mk)
-$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
-$(call inherit-product-if-exists, vendor/oplauncher/OPLauncher2.mk)
-$(call inherit-product, vendor/prebuilts/prebuilts.mk)
 
 PRODUCT_BRAND ?= TeamorchidosRoms
 
@@ -122,7 +118,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     Profiles \
     WeatherProvider
-# Sauces packages
+
+# extras packages
 PRODUCT_PACKAGES += \
     LatinIMEGooglePrebuilt \
     SoundPickerPrebuilt
@@ -283,8 +280,6 @@ endif
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
 
-# Branding
-include vendor/aosp/config/branding.mk
 
 # Set LINEAGE_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
@@ -398,12 +393,4 @@ endif
 -include vendor/lineage/config/partner_gms.mk
 -include vendor/aeonax/anxcamera/anx-vendor.mk
 
-# Fonts
-PRODUCT_COPY_FILES += \
-    vendor/lineage/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
-    vendor/lineage/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
-    vendor/lineage/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
-    vendor/lineage/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
-    vendor/lineage/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
-    vendor/lineage/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
 
